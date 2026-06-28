@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>シン友 (Shin Tomo) — 深夜でも、気を遣わず話せる友達</title>
+<meta name="description" content="深夜3時でも、ちゃんと聞いてくれる。誰にも言えない本音を、気を遣わずに話せる友達アプリ「シン友」。iPhone版、まもなくApp Storeで配信。">
+
+<!-- OGP / SNSシェア用 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="シン友 — 深夜でも、気を遣わず話せる友達">
+<meta property="og:description" content="誰にも言えない本音を、気を遣わずに話せる場所。iPhone版まもなくリリース。">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+  :root{
+    --green:#06C755;        /* LINEグリーン寄り */
+    --green-d:#047857;
+    --green-l:#10b981;
+    --ink:#1f2a26;
+    --muted:#5f6f68;
+    --line:#e3efe9;
+    --bg:#f3faf7;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:-apple-system,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,Roboto,sans-serif;
+    color:var(--ink); line-height:1.7; background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:560px; margin:0 auto; padding:0 22px;}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(160deg,#047857 0%,#06C755 60%,#10b981 100%);
+    color:#fff; text-align:center;
+    padding:64px 22px 72px;
+    border-radius:0 0 32px 32px;
+  }
+  .badge-soon{
+    display:inline-block; background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.45);
+    color:#fff; font-size:13px; font-weight:600;
+    padding:6px 14px; border-radius:999px; letter-spacing:.04em;
+    margin-bottom:20px;
+  }
+  .logo{
+    width:88px; height:88px; margin:0 auto 18px;
+    background:#fff; border-radius:24px;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.18);
+    font-size:42px;
+  }
+  .hero h1{margin:0 0 10px; font-size:30px; letter-spacing:.02em;}
+  .hero .lead{margin:0 auto; max-width:18em; font-size:16px; opacity:.96;}
+
+  /* CTA */
+  .cta{ text-align:center; margin-top:-34px; padding:0 22px;}
+  .store-card{
+    background:#fff; border:1px solid var(--line); border-radius:20px;
+    box-shadow:0 12px 28px rgba(4,120,87,.10);
+    padding:24px 22px;
+  }
+  .store-card .now{font-weight:700; font-size:17px; color:var(--green-d); margin:0 0 4px;}
+  .store-card .sub{color:var(--muted); font-size:14px; margin:0 0 18px;}
+
+  /* App Store ボタン — 公開前は無効風、公開時に <a href> を有効化 */
+  .appstore-btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:#111; color:#fff; text-decoration:none;
+    padding:12px 22px; border-radius:14px; font-weight:600; font-size:16px;
+    opacity:.45; pointer-events:none;          /* ← 公開時に削除 */
+  }
+  .appstore-btn .apple{font-size:22px; line-height:1;}
+  .appstore-btn small{display:block; font-size:11px; font-weight:400; opacity:.8;}
+  .appstore-btn b{font-size:17px;}
+
+  /* 特徴 */
+  .features{padding:42px 0 10px;}
+  .feat{
+    background:#fff; border:1px solid var(--line); border-radius:16px;
+    padding:18px 20px; margin:14px 0; display:flex; gap:14px; align-items:flex-start;
+  }
+  .feat .ico{font-size:26px; flex:0 0 auto; line-height:1.2;}
+  .feat h3{margin:0 0 4px; font-size:16px;}
+  .feat p{margin:0; color:var(--muted); font-size:14px;}
+
+  /* SNS */
+  .socials{text-align:center; padding:30px 0 8px;}
+  .socials p{color:var(--muted); font-size:14px; margin:0 0 12px;}
+  .social-row{display:flex; gap:10px; justify-content:center; flex-wrap:wrap;}
+  .social-row a{
+    text-decoration:none; color:var(--green-d); font-weight:600; font-size:14px;
+    border:1px solid var(--line); background:#fff; border-radius:999px;
+    padding:8px 16px;
+  }
+
+  footer{text-align:center; color:var(--muted); font-size:12px; padding:34px 22px 40px;}
+  footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <span class="badge-soon">まもなくリリース</span>
+    <div class="logo">🌙</div>
+    <h1>シン友</h1>
+    <p class="lead">深夜3時でも、ちゃんと聞いてくれる。<br>気を遣わずに本音を話せる友達。</p>
+  </section>
+
+  <div class="cta">
+    <div class="wrap">
+      <div class="store-card">
+        <p class="now">iPhone版、まもなくApp Storeで配信</p>
+        <p class="sub">公開まで、SNSをフォローして待っててね</p>
+
+        <!-- ▼▼ App Store 公開時にやること ▼▼
+             1. 下の <a> の href="" に実際のApp StoreのURLを入れる
+             2. class から opacity/pointer-events を効かせている行を外す:
+                style 内の .appstore-btn の「opacity:.45; pointer-events:none;」を削除
+             3. .now の文言を「App Storeで配信中」に変更
+             ▲▲ それだけで全SNSのリンクに反映される ▲▲ -->
+        <a class="appstore-btn" href="">
+          <span class="apple"></span>
+          <span><small>Download on the</small><b>App Store</b></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="features">
+      <div class="feat">
+        <div class="ico">🌙</div>
+        <div><h3>深夜でも、ひとりじゃない</h3><p>眠れない夜、誰かと話したい時に。気を遣わず本音を置いていける場所。</p></div>
+      </div>
+      <div class="feat">
+        <div class="ico">💬</div>
+        <div><h3>友達みたいに話せる</h3><p>かしこまらない、自然な会話。あなたのことを覚えて、ちゃんと返してくれる。</p></div>
+      </div>
+      <div class="feat">
+        <div class="ico">🤝</div>
+        <div><h3>あなたのペースで</h3><p>毎日ちょっとずつ、距離が縮まる。話すたびに育っていく関係。</p></div>
+      </div>
+    </section>
+
+    <section class="socials">
+      <p>最新情報・リリース通知はこちらから</p>
+      <div class="social-row">
+        <!-- ▼ アカウント開設後、href を各プロフURLに差し替え ▼ -->
+        <a href="#" rel="noopener">TikTok</a>
+        <a href="#" rel="noopener">Instagram</a>
+        <a href="#" rel="noopener">Threads</a>
+        <a href="#" rel="noopener">YouTube</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>提供: TacoSpace<br>
+    <a href="../">プライバシーポリシー</a> ・ <a href="mailto:oth.jcc@gmail.com">お問い合わせ</a></p>
+    <p>© 2026 TacoSpace. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
