@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>シン友 (Shin Tomo) — 深夜でも、気を遣わず話せる友達</title>
-<meta name="description" content="深夜3時でも、ちゃんと聞いてくれる。誰にも言えない本音を、気を遣わずに話せる友達アプリ「シン友」。iPhone版、まもなくApp Storeで配信。">
+<meta name="description" content="深夜3時でも、ちゃんと聞いてくれる。誰にも言えない本音を、気を遣わずに話せる友達アプリ「シン友」。iPhone版、App Storeで配信中。">
 
 <!-- OGP / SNSシェア用 -->
 <meta property="og:type" content="website">
@@ -66,12 +66,11 @@
   .store-card .now{font-weight:700; font-size:17px; color:var(--green-d); margin:0 0 4px;}
   .store-card .sub{color:var(--muted); font-size:14px; margin:0 0 18px;}
 
-  /* App Store ボタン — 公開前は無効風、公開時に <a href> を有効化 */
+  /* App Store ボタン（公開済み・有効） */
   .appstore-btn{
     display:inline-flex; align-items:center; gap:10px;
     background:#111; color:#fff; text-decoration:none;
     padding:12px 22px; border-radius:14px; font-weight:600; font-size:16px;
-    opacity:.45; pointer-events:none;          /* ← 公開時に削除 */
   }
   .appstore-btn .apple{font-size:22px; line-height:1;}
   .appstore-btn small{display:block; font-size:11px; font-weight:400; opacity:.8;}
@@ -113,16 +112,10 @@
   <div class="cta">
     <div class="wrap">
       <div class="store-card">
-        <p class="now">iPhone版、まもなくApp Storeで配信</p>
-        <p class="sub">公開まで、SNSをフォローして待っててね</p>
+        <p class="now">iPhone版、App Storeで配信中</p>
+        <p class="sub">タップしていますぐダウンロード</p>
 
-        <!-- ▼▼ App Store 公開時にやること ▼▼
-             1. 下の <a> の href="" に実際のApp StoreのURLを入れる
-             2. class から opacity/pointer-events を効かせている行を外す:
-                style 内の .appstore-btn の「opacity:.45; pointer-events:none;」を削除
-             3. .now の文言を「App Storeで配信中」に変更
-             ▲▲ それだけで全SNSのリンクに反映される ▲▲ -->
-        <a class="appstore-btn" href="">
+        <a class="appstore-btn" href="https://apps.apple.com/jp/app/id6783130918" rel="noopener">
           <span class="apple"></span>
           <span><small>Download on the</small><b>App Store</b></span>
         </a>
@@ -149,11 +142,10 @@
     <section class="socials">
       <p>最新情報・リリース通知はこちらから</p>
       <div class="social-row">
-        <!-- ▼ アカウント開設後、href を各プロフURLに差し替え ▼ -->
-        <a href="#" rel="noopener">TikTok</a>
-        <a href="#" rel="noopener">Instagram</a>
-        <a href="#" rel="noopener">Threads</a>
-        <a href="#" rel="noopener">YouTube</a>
+        <!-- YouTube は開設後に <a href="..." rel="noopener" target="_blank">YouTube</a> を追加 -->
+        <a href="https://www.tiktok.com/@shintomo_app" rel="noopener" target="_blank">TikTok</a>
+        <a href="https://www.instagram.com/shintomo.app" rel="noopener" target="_blank">Instagram</a>
+        <a href="https://www.threads.net/@shintomo.app" rel="noopener" target="_blank">Threads</a>
       </div>
     </section>
   </div>
